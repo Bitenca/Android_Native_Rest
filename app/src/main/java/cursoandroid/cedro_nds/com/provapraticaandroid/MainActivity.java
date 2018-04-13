@@ -8,7 +8,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
                     ft2.remove(fragment);
                     ft2.replace(R.id.fragment_content, new UserCountriesFragment());
                     ft2.commit();
+                    return true;
                 case R.id.navigation_notifications:
                     FragmentTransaction ft3 = fm.beginTransaction();
                     ft3.remove(fragment);
