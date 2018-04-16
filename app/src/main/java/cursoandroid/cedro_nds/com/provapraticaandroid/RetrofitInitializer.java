@@ -3,6 +3,8 @@ package cursoandroid.cedro_nds.com.provapraticaandroid;
 
 import org.json.JSONObject;
 
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -22,7 +24,7 @@ public class RetrofitInitializer {
 
     public interface ApiService{
         @GET("active/")
-        Call<JSONObject> listCountries();
+        Call<List<JSONObject>> listCountries();
 
         @GET("{id}/flag")
         Call<JSONObject> listCountryFlag(@Path("id") int id);
